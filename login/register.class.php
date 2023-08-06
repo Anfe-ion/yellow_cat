@@ -56,7 +56,7 @@ class RegisterUser{
 		//Se mira a través del archivo con el loop
 		foreach($this->stored_users as $user){
 			if($this->username == $user['username']){
-				$this->error = "Username already taken, please choose a different one.";
+				$this->error = "El nombre de usuario ya existe. Por favor, elija otro";
 				return true;
 			}
 		}
@@ -73,9 +73,9 @@ class RegisterUser{
            	//JSON_PRETTY para obtener un archivo más legible
            	//Si todo funciona bien...
 			if(file_put_contents($this->storage, json_encode($this->stored_users, JSON_PRETTY_PRINT))){
-				return $this->success = "Your registration was successful";
+				return $this->success = "Tu registro fue exitoso.";
 			}else{
-				return $this->error = "Something went wrong, please try again";
+				return $this->error = "Algo salió mal. Por favor, intente nuevamente.";
 			}
 		}
 	}

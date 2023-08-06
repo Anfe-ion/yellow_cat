@@ -1,18 +1,10 @@
 [
     {
-        "username": "Pedro",
-        "password": "$2y$10$tclz5ypcosTfwNpbR.bAxeYKcdDZVXrlySqkAKtBR5jOVu7YLp0jO"
-    },
-    {
-        "username": "Andres",
-        "password": "$2y$10$z4eKpF6ZaDMnP1BDBRLUauTYSRWrWcRw6Hm\/98jslXo36IkBcYNVy"
-    },
-    {
-        "username": "Felipe",
-        "password": "$2y$10$.raNNzAgH6ubwNEJjBWeXeBzRjXui8lj7QIOZjCRIPNIkyKdB1U7m"
-    },
-    {
         "username": "Perro",
-        "password": "$2y$10$szrEFZQoJmtbdBnnuccaEeZwKSHD5pe0\/1hftItZ.qdjwMtBjqGty"
+        "password": "$2y$10$IT\/srbFnRxyI7n52Wu3hHeN.vWw48Cj4xuzWWi3zdaEkI.TjsUrJ6"
+    },
+    {
+        "username": "Gato",
+        "password": "$2y$10$Zsbohi\/zz.kL04E6tIiRS.GNXOqVcwrzXul57NZIPmij3l2ULWTtG"
     }
 ]

@@ -13,12 +13,10 @@ class RegisterUser{
 
 	//Para iniciar las propiedades
 	public function __construct($username, $password){
-		
 		//Para quitar cualquier espacio en blanco al principio o final
 		$this->username = trim($this->username);
 		//Para "sanitizar" el valor
 		$this->username = filter_var($username, FILTER_SANITIZE_STRING);
-
 		//Lo mismo para el password
 		$this->raw_password = filter_var(trim($password), FILTER_SANITIZE_STRING);
 		//Encriptacion
@@ -28,13 +26,11 @@ class RegisterUser{
         //json_decode para transformar a array
         //Como se necesita un array se pone true, de no ponerlo devolvera un objeto
 		$this->stored_users = json_decode(file_get_contents($this->storage), true);
-
 		//Asignar un array con el username y la password cifrada a la propiedad new_user
 		$this->new_user = [
 			"username" => $this->username,
 			"password" => $this->encrypted_password,
 		];
-
 		//Si los campos no están vacios, inserte los usuauris..
 		if($this->checkFieldValues()){
 			$this->insertUser();
@@ -44,7 +40,7 @@ class RegisterUser{
 	//Para verificar si los input son validos
 	private function checkFieldValues(){
 		if(empty($this->username) || empty($this->raw_password)){
-			$this->error = "Ambos campos son requeridos.";
+			$this->error = "Todos los campos son requeridos.";
 			return false;
 		}else{
 			return true;
@@ -56,7 +52,7 @@ class RegisterUser{
 		//Se mira a través del archivo con el loop
 		foreach($this->stored_users as $user){
 			if($this->username == $user['username']){
-				$this->error = "El nombre de usuario ya existe. Por favor, elija otro";
+				$this->error = "El nombre de usuario ya ha sido usado. Por favor, escoja otro.";
 				return true;
 			}
 		}
@@ -73,13 +69,13 @@ class RegisterUser{
            	//JSON_PRETTY para obtener un archivo más legible
            	//Si todo funciona bien...
 			if(file_put_contents($this->storage, json_encode($this->stored_users, JSON_PRETTY_PRINT))){
-				return $this->success = "Tu registro fue exitoso.";
+				return $this->success = "Registro exitoso.";
 			}else{
-				return $this->error = "Algo salió mal. Por favor, intente nuevamente.";
+				return $this->error = "Algo salió mal. Intenta de nuevo.";
 			}
 		}
 	}
 
 
 
-} // fin de la clase
+} //Fin

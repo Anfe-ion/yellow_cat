@@ -1,6 +1,5 @@
 <!--Se usara un poco de php para relacionar con los demás archivos-->
 <?php require("register.class.php") ?>
-
 <!--Ahora para verificar si se dio clic en el botón-->
 <?php
 	if(isset($_POST['submit'])){
@@ -15,30 +14,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro | Yellow Cat</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <link rel="stylesheet" href="styles.css">
+	<title>Registro</title>
 </head>
 <body>
-    <!--Se crea el form-->
-    <form action="" method="post" enctype="multipart/form-data" autocomplete="off">
-        <h2>Registro</h2>
-        <h4>Todos los campos son <span>requeridos</span></h4>
-        <!--Se crean los campos-->
-        <label>Usuario</label>
-        <input type="text" name="username">
+	<!--Se crea el form-->
+	<form action="" method="post" enctype="multipart/form-data" autocomplete="off">
+		<h2>Registro</h2>
+		<h4>Todos los campos <span>son requeridos</span></h4>
+		<!--Se crean los campos-->
+		<label>Usuario</label>
+		<input type="text" name="username">
 
-        <label>Contraseña</label>
-        <input type="text" name="password">
+		<label>Contraseña</label>
+		<input type="text" name="password">
+		<!--Boton registro-->
+		<button type="submit" name="submit">Registrame</button>
 
-        <!--Boton registro-->
-        <button type="submit" name="submit">Registrate</button>
-
-        <!--P's para enviar los mensajes-->
+		<a href="./login.php" class="link">¿Ya tienes cuenta? Clica aquí</a>
+		<!--P's para enviar los mensajes-->
         <!--Se añaden las propiedades-->
-        <p class="error"><?php echo @$user->error ?></p>
-        <p class="success"><?php echo @$user->success ?></p>
-    </form>    
+		<p class="error"><?php echo @$user->error ?></p>
+		<p class="success"><?php echo @$user->success ?></p>
+	</form>
+
 </body>
 </html>

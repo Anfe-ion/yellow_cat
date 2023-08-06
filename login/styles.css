@@ -123,6 +123,9 @@ form button:active{
 	margin-top: 50px;
 }
 
-.content main h3{
-
+.link{
+	display: block;
+	color: coral;
+	text-align: center;
+	padding: 1rem;
 }

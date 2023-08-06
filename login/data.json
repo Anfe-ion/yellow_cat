@@ -1,3 +1,14 @@
 [
-    
+    {
+        "username": "Pedro",
+        "password": "$2y$10$tclz5ypcosTfwNpbR.bAxeYKcdDZVXrlySqkAKtBR5jOVu7YLp0jO"
+    },
+    {
+        "username": "Andres",
+        "password": "$2y$10$z4eKpF6ZaDMnP1BDBRLUauTYSRWrWcRw6Hm\/98jslXo36IkBcYNVy"
+    },
+    {
+        "username": "Felipe",
+        "password": "$2y$10$.raNNzAgH6ubwNEJjBWeXeBzRjXui8lj7QIOZjCRIPNIkyKdB1U7m"
+    }
 ]

@@ -6,5 +6,19 @@
     {
         "username": "Gato",
         "password": "$2y$10$Zsbohi\/zz.kL04E6tIiRS.GNXOqVcwrzXul57NZIPmij3l2ULWTtG"
+    },
+    {
+        "username": "Perrencio",
+        "password": "$2y$10$AeGvHjaRfDrFBW0XIZFbYO7f1HI66YPzROGhqzoGVRTPLe.OzkDye",
+        "birthDate": "2023-08-04",
+        "cedula": "856999",
+        "email": "perrencio@gmail.com"
+    },
+    {
+        "username": "Yuca",
+        "password": "$2y$10$LB.ECJy5oH5RSW.a3hUkYe\/9bVeNNIhIy.z1yjlnmvBkpvprA3p3S",
+        "birthDate": "5555-05-13",
+        "cedula": "1000",
+        "email": "yuca@gmail.com"
     }
 ]
